@@ -1,0 +1,76 @@
+
+<script src="https://kit.fontawesome.com/d4bd3dfc55.js" crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #717774;">
+  <div class="container-fluid">
+    <a class="navbar-brand text-light" href="#"><img src="./.././../../src/Capture-removebg-preview.jpg" alt=""><i class="fa fa-h-square ml-3 mx-1" aria-hidden="true"></i>HotelFinder</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active text-light" ria-current="page" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Hotels</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Apartment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Aparthotel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Guest House</a>
+        </li>
+      </ul>
+
+      <form class="d-flex mx-3">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-success me-3" type="submit">Search</button>
+      </form>
+      <div class="nav-item">
+        <a class="nav-link text-light me-2" href="#" >Welcome! {{userDetails.fullName}}</a>
+      </div>
+      <button class="btn btn-danger my-2 my-sm-0" (click)="onLogout()">Logout</button>
+    </div>
+  </div>
+</nav>
+
+<!-- content -->
+<form class="wrap mt-5">
+  <div class="search">
+    <h3>Search country by name filter : </h3>
+    <input class="searchTerm" type="text" name="searchTerm" 
+      placeholder="Filter by country name"
+       />
+  </div>
+</form>
+
+
+
+
+<div class="container mt-5" style="margin-left: 10%;">
+  <div class="row">
+    <ng-container *ngFor="let hotel of returnedStock ">
+      <div class="card col-md-3">
+        <img [src]="hotel.max_photo_url" alt="">
+        <h5 >{{hotel.accommodation_type_name}}</h5>
+        <p>{{hotel.hotel_name}}</p>
+        <p>{{hotel.address}}</p>
+        <p>{{hotel.min_total_price}}</p>
+        <a class="btn btn-primary color" href="{{hotel.url}}">Book Now</a>
+      </div>
+
+    </ng-container>
+    
+  </div>
+</div>
+
+
+
+
+
+
+<!-- content -->

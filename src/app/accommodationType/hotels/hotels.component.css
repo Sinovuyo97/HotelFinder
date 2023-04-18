@@ -1,0 +1,191 @@
+html {
+    background-color: aqua;
+}
+
+.cart-top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+}
+
+.product img {
+    width: 64px;
+
+}
+#input{
+    width: 59%;
+    margin-top: 5.5%;
+    margin-left: 23%;
+}
+.color {
+    background-color: #717774;
+}
+
+h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100ch;
+}
+
+.product {
+    margin: 0px 15px;
+    text-align: center;
+
+}
+
+.product :hover {
+    color: blue;
+}
+
+.card {
+    padding: 20px;
+    margin: 50px;
+}
+
+.cart img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0, 3s ease-in-out;
+}
+
+.cart img:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.card {
+    width: 35%;
+    padding: 20px;
+    margin: 50px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+    transition: 0.3s ease-in-out;
+
+}
+
+:host {
+    display: block;
+    margin-top: 1rem;
+}
+
+.open-close-container {
+    border: 1px solid #dddddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Spinners */
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #717774;
+    border-right: 16px solid f3f3f3;
+    border-bottom: 16px solid #717774;
+    border-left: 16px solid f3f3f3;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.load {
+    margin-top: 22%;
+    margin-left: 40%;
+}
+
+.icon {
+    margin: -7.5% 0 0 43.5%;
+}
+
+#icon {
+    color: #717774;
+    font-size: 46px;
+}
+
+/* for small screens */
+
+@media only screen and (max-width: 940px) {
+    .loader {
+        border: 8px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 8px solid #717774;
+        border-right: 8px solid f3f3f3;
+        border-bottom: 8px solid #717774;
+        border-left: 8px solid f3f3f3;
+        width: 60px;
+        height: 60px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .load {
+        margin-top: 70%;
+        margin-left: 35%;
+    }
+
+    .icon {
+        margin: -10.5% 0 0 40.5%;
+    }
+    #icon {
+        color: #717774;
+        font-size: 23px;
+    }
+}
+
+
+/* Spinners */

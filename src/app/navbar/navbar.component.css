@@ -1,0 +1,12 @@
+#Account{
+    margin-left: 7%;   
+}
+#navbar{
+    background-color: #717774;
+}
+@media only screen and (max-width: 940px) {
+    #navbar{
+        background-color: #717774;
+        width: 100%;
+    }
+}

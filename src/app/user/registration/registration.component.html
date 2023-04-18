@@ -1,0 +1,48 @@
+
+<body>
+    <!-- main -->
+    <div class="main-w3layouts wrapper">
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                <form action="#" method="post" [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()">
+
+                    <input class="form-control" type="text" name="Username" placeholder="Username"
+                        formControlName="UserName" required>
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('UserName')?.touched && service.formModel.get('UserName')?.errors?.['required']">This
+                        field is mandatory.</label>
+
+                    <input class="form-control mt-2" type="text" name="FullName" placeholder="FullName"
+                        formControlName="FullName">
+
+
+                    <input type="email" name="email" placeholder="Email" class="form-control mt-2" formControlName="Email">
+                    <label class="text-danger"
+                        *ngIf="service.formModel.get('Email')?.touched && service.formModel.get('Email')?.errors?.['email']">Invalid
+                        email address.</label>
+
+                    <div formGroupName="Passwords" mt-2>
+                        <input class="mt-2 form-control" formControlName="Password" type="password" name="password"
+                            placeholder="Password" required>
+                        <label class="text-danger"
+                            *ngIf="service.formModel.get('Passwords.Password')?.touched && service.formModel.get('Passwords.Password')?.errors?.['required']">This
+                            field is mandatory.</label>
+
+                        <input class="mt-2 form-control" formControlName="ConfirmPassword" type="password" name="password"
+                            placeholder="Confirm Password" required>
+                        <label class="text-danger"
+                            *ngIf="service.formModel.get('Passwords.ConfirmPassword')?.touched && service.formModel.get('Passwords.ConfirmPassword')?.errors?.['required']">This
+                            field is mandatory.</label>
+                        <label class="text-danger"
+                            *ngIf="service.formModel.get('Passwords.ConfirmPassword')?.touched && service.formModel.get('Passwords.ConfirmPassword')?.errors?.['passwordMismatch']">Confirm
+                            Password does not match.</label>
+                    </div>
+                    
+                    <input type="submit" value="SIGNUP" [disabled]="!service.formModel.valid">
+                </form>
+                <p>Don't have an Account? <a routerLink="/user/login"> Login Now!</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- //main -->
+</body>

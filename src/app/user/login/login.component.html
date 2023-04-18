@@ -1,0 +1,14 @@
+<div class="login-page">
+    <div class="form">
+
+        <form class="login-form" #form='ngForm' class="mb-4" autocomplete="off" (submit)="onSubmit(form)">
+
+            <input class="form-control" #UserName="ngModel" name="UserName" [(ngModel)]="formModel.UserName"
+                placeholder="Username" required />
+            <input type="password" class="form-control" #Password="ngModel" name="Password"
+                [(ngModel)]="formModel.Password" placeholder="Password" required>
+            <button type="submit" [disabled]="form.invalid">login</button>
+            <p class="message">Not registered? <a routerLink="/user/registration">Create an account</a></p>
+        </form>
+    </div>
+</div>

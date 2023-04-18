@@ -1,0 +1,25 @@
+<app-navbar></app-navbar>
+<div class="container mt-5" style="margin-left: 10%;">
+    <div class="row">
+      <ng-container *ngFor="let hotel of hotels; let i = index">
+        <div *ngIf="hotel.accommodation_type_name == 'Aparthotel'" class="card col-md-3">
+          <img [src]="hotel.max_photo_url" alt="">
+          <h5 >{{hotel.accommodation_type_name}}</h5>
+          <p>{{hotel.hotel_name}}</p>
+          <p>{{hotel.address}}</p>
+          <p>{{hotel.min_total_price|currency:'R'}}</p>
+          <button class="btn btn-primary color" routerLink="/user/login">Book Now</button>
+        </div>
+      </ng-container>
+    </div>
+    <ng-container *ngIf="hotels">
+      <div class="loader load"></div>
+      <div class="icon"><i class="fa fa-h-square" id="icon" aria-hidden="true"></i></div>
+
+      <!-- <div class=" text-dark text-center" style="width: 3rem; height: 3rem;justify-content:center; margin-top: 22%;margin-left: 40%;" role="status">
+      <i class="loader" aria-hidden="true"style="color:#717774;"></i>
+      <span class="mx-3">Loading...</span> 
+      </div>-->
+      
+    </ng-container>
+  </div>
